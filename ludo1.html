@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LUDO_game</title>
+	<link rel="stylesheet" type="text/css" href="ludo.css">
+	<script type="text/javascript" src="ludo.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: white" onload="load()">
+     
+	<h1 align="center" style="color:red;font-size: 40px;text-shadow: 2px 2px yellow;text-decoration: underline;">THE JINGLE LUDO</h1>
+	<audio id="myAudio">
+  <source src="diceroll.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+	<div class="myDIV"><p>HOW TO PLAY</p></div>
+<div class="hide">
+     <p>It's an ordinary ludo game with few variances. Firstly you have to click "proceedAi" in order to move on the ith coin of player A.(Order is by the first coin which came out and you must remeber it) Also unless you click the proceed button , the game will not proceed. There is no provision for second chance(except after getting six(es)) or any back option. So be careful</p></div>
+	<marquee style="color:yellow;font-size: 20px">NOW PLAY LUDO ON EVERY SCREEN OF ANY SIZE!</marquee>
+		<p style="font-size: 20px;font-weight: 900;font-style: italic;color: red">Enjoy The Dark Mode!</p>
+	<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+<p style="color: rgb(600,100,100);font-weight: bold;">DARK MODE(Recommended)</p>
+	<button id="la" style="font-weight:bold " class="block" onclick="openA()" disabled >LOCKER FOR A</button>
+
+
+	<div class="left" style="color:red;"><b>PLAYER A:</b>
+		<img id="a1" src="yellow.png" width="50px" height="50px" style="visibility: visible;"></img>
+		<img  id="a2" src="yellow.png" width="50px" height="50px" style="visibility: visible;"></img>
+		<button id="prA2" disabled style="color:white; background-color:blue" onclick="moveA2()">ProceedA2</button><button id="prA1" disabled style="color:white; background-color:blue" onclick="moveA1()">ProceedA1</button></div>
+
+
+	<div class="right" style="color:red;"><b>PLAYER B:<b>
+		<img id="b1" src="blue.png" width="50px" height="50px"></img>
+		<img id="b2" src="blue.png" width="50px" height="50px"></img>
+		<button id="prB1" disabled style="color:white; background-color: blue" onclick="moveB1()">ProceedB1</button><button id="prB2" disabled style="color:white; background-color: blue"  onclick="moveB2()">ProceedB2</button></div>
+
+
+	<table align="center">
+		<tr>
+			<td class="xx" id="c1"><b>START A</b></td>
+			<td class="xx" id="c2"></td>
+			<td class="xx" id="c3"></td>
+			<td class="xx" id="c4"></td>
+			<td class="xx" id="c5"></td>
+			<td class="xx" id="c6"></td>
+			<td class="xx" id="c7"></td>
+			<td class="xx" id="c8"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c28" style="background-color: rgb(500,200,100);">FINISH A</td>
+			<td id="show!" colspan="6" rowspan="2" style="border: 0px;background-color: white;font-size: 50px;color: red;"></td>
+			<td class="xx" id="c9"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c27"></td>
+			
+			<td class="xx" id="c10"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c26"></td>
+			<td colspan="6"><button id="roll1" type="button" class="block" onclick="throw_A()" >Roll</button></td>
+			<td class="xx" id="c11"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c25">
+			</td>
+			<td id="blank" colspan="6" rowspan="3" style="background-color: blue"><img align="center" id="dic" src="b.png" width="100%" height="200px" alt="Dice" style="float: left;"></img></td>
+			<td class="xx" id="c12"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c24">
+			</td>
+			
+			<td class="xx" id="c13"></td>
+		</tr>
+		<tr>
+			<td class="xx" id="c23">
+			</td>
+			<td class="xx" id="c14" style="background-color: rgb(100,100,700);">FINISH B</td>
+		</tr>
+		
+		<tr>
+			<td class="xx" id="c22"></td>
+			<td class="xx" id="c21"></td>
+			<td class="xx" id="c20"></td>
+			<td class="xx" id="c19"></td>
+			<td class="xx" id="c18"></td>
+			<td class="xx" id="c17"></td>
+			<td class="xx" id="c16"></td>
+			<td class="xx" id="c15"><b>START B</b></td>
+		</tr>
+
+	</table>
+<button id="lb" type="button" class="block" style="font-weight:bold ;position:relative;line-height: 20px" onclick="openB()" disabled>LOCKER FOR B</button>
+
+
+
+<footer>
+
+	<div align="center" style="position: relative; margin-bottom:0px ">
+		<p id="numm" style="margin: 10px;color:rgb(100,700,100);font-variant: small-caps;font-size: 40px">Follow Us</p>
+<a href="https://www.facebook.com/vishal.kumarmishra.5492" target="_blank" class="fa fa-facebook" ></a>
+<a href="https://twitter.com/Vishal9083?s=09"  target="_blank" class="fa fa-twitter"></a>
+<a href="https://mail.google.com/mail/u/?authuser=vishalkumarmishra8052@gmail.com"  target="_blank" class="fa fa-google"></a>
+</div>
+</footer>
+</body>
+</html>
